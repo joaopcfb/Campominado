@@ -30,12 +30,14 @@ public class Main {
         
         sc.nextLine();
         
-        /*Apaga console*/
+        /* Apaga console */
         new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
         
         
         campo campos;
         campos = learquivo();
+        
+        /* Lê a quantidade de bombas, antes checa se foi campos foi instanciado */ 
         
         if (campos == null)
         {
@@ -53,7 +55,7 @@ public class Main {
         }
             
         
-        
+        /* Looping que o usuario coloca os comandos e mostra o campo toda vez que uma jogada for realizada*/
         while(true){
             new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
             campos.mostracampo();
@@ -78,7 +80,7 @@ public class Main {
     }
     
     
-    /*Separa o comando das posicoes x e y*/
+    /* Separa o comando das posicoes x e y */
     public static String[] Separaargs(String entrada)
     {
         String [] argseparado;
@@ -91,6 +93,7 @@ public class Main {
     
     }
     
+    /*Funcao que verifica se tem um arquivo. Caso verdadeiro, pergunta se o usuario deseja retornar com o jogo salvo*/
     public static campo learquivo() throws IOException, InterruptedException
     {
         Scanner sc = new Scanner(System.in);
