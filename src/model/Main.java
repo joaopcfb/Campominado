@@ -11,7 +11,7 @@ import java.net.URISyntaxException;
  * DATA: 27/05/2021
  * Professor: Gabriel
  * Disciplina: Programação orientada à objetos 1
- * Alunos: Joao P. F. ; Gabriel R.
+ * Alunos: Joao P. F. C. ; Gabriel Ribera Souza
  * 
  */
 public class Main {
