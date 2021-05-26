@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author joaos
  */
 public class campo {
-    /* quatro matrizes booleanas: matriz campo diz se o campo já foi aberto. a bomba diz se existem bombas. a de bandeiras diz se existem bandeiras*/
+    /* quatro matrizes booleanas: matriz campo diz se o campo já foi aberto. a tembomba diz se existem bombas. a de bandeiras diz se existem bandeiras. bombperto diz o numero de bombas perto de um campo*/
     private final boolean [][] campo;
     private final boolean [][] tembomba;
     private boolean [][] bandeiras;
@@ -22,6 +22,7 @@ public class campo {
     private int num_bandeiras = 0;
     private int qtd_bombas = 0;
     
+    /*construtor de um novo jogo*/
     public campo(int qtdbomba) 
     {
         this.bombperto = new int[x_max][y_max];
@@ -35,6 +36,8 @@ public class campo {
 
     
     }
+    
+    /* construtor de um jogo que estava salvo*/
     public campo(boolean [][] campo, boolean [][] bandeiras, boolean [][] tembomba) 
     {
         this.bandeiras = bandeiras;
@@ -55,7 +58,7 @@ public class campo {
     {
         return (campo[x][y]);
     }
-    
+    /* coloca bandeiras. quando o numero de bandeiras for igual ao de bombas, ele checa se o usuario venceu */
     public void setBandeira(int x, int y)
     {
         if (!(bandeiras[x][y]))
@@ -79,7 +82,7 @@ public class campo {
         campo[x][y] = true;
     }
             
-    
+    /* funcao que gera bombas */
     public void gerabombas(int num_bomb)
     {
         Random local_bomb = new Random();
@@ -101,6 +104,7 @@ public class campo {
     
     }
     
+    /* funcao que vai verificar se existe bomba perto de um campo, se sim, ele conta a quantidade de bombas e coloca na matriz */
     public void geraBombperto()
     {
         for (int i = 0; i < 10; i++) 
