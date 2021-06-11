@@ -101,7 +101,7 @@ public class jogada
         {
             for (int k = -1; k < 2 ; k++){
                 for (int l = -1; l < 2; l++){
-                    if (((x-k) > -1) && ((y-l)> -1) && ((x+k) < x_max) && ((y+l) < y_max) && (!campos.checaBomba(x+k, y+l)))            
+                    if (((x+k) > -1) && ((y+l)> -1) && ((x+k) < x_max) && ((y+l) < y_max) && (!campos.checaBomba(x+k, y+l)))            
                     {
                         campos.setCampo(x+k, y+l);
                     }
