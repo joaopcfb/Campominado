@@ -11,7 +11,7 @@ import java.net.URISyntaxException;
  * DATA: 27/05/2021
  * Professor: Gabriel
  * Disciplina: Programação orientada à objetos 1
- * Alunos: Joao P. F. C. ; Gabriel Ribera Souza
+ * Aluno: Joao P. F. C. 
  * 
  */
 public class Main {
@@ -24,7 +24,7 @@ public class Main {
         System.out.println("========================");
         System.out.println("Campo minado simples em java");
         System.out.println("Professor: Gabriel");
-        System.out.println("Alunos: Joao P. F. ; Gabriel R.");
+        System.out.println("Alunos: Joao P. F.");
         System.out.println("========================");
         System.out.println("Aperte enter para iniciar: ");
         
